@@ -29,8 +29,7 @@ The completed hardware produces a flowing LED pattern whose direction changes wh
 | NE555 timer                 | Generates timing pulses                                         |
 | CD4017 decade counter       | Sequences the LED outputs                                       |
 | LEDs                        | Produce the water-flow visual effect                            |
-| 7805 voltage regulator      | Provides regulated voltage
-               |
+| 7805 voltage regulator      | Provides regulated voltag |
 | Resistors and capacitors    | Support the electronic circuits                                 |
 | Breadboard and jumper wires | Circuit assembly and connections                                |
 | Battery / power supply      | Powers the hardware                                             |
