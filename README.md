@@ -18,19 +18,19 @@ The project was built to explore how electronic timing, sequential logic, and ti
 
 ## Working Principle
 
-The system produces a water-flow-like LED lighting effect. When the setup is tilted, the LEDs glow in a sequence that creates the visual impression of light flowing in the direction of the tilt.
+The project produces a water-flow-like lighting effect using LEDs. When the setup is tilted to the left or right, the direction of the LED sequence changes accordingly, creating the visual impression of water flowing in the direction of the tilt.
 
-The project uses a 555 timer, a CD4017 decade counter, and tilt sensors to create the effect. The exact circuit connections and the specific role of each component in the original implementation are yet to be documented.
+The system uses a 555 timer, a CD4017 decade counter, and tilt sensors. The project demonstrates the use of electronic timing, sequential logic, and tilt-based input to control a directional lighting pattern.
+
+The exact circuit topology, component values, and pin connections will be documented once they can be verified.
 
 ## Output Behaviour
 
-- Produces a flowing LED lighting pattern.
-- The apparent direction of the flow corresponds to the direction of tilt.
-- Combines electronic timing, sequential logic, and tilt sensing.
+- **Left tilt:** The LED flow changes to the corresponding direction.
+- **Right tilt:** The LED flow changes to the opposite direction.
+- **Visual effect:** Sequential LED illumination creates a water-flow-like pattern.
 
-*The description is based on the observed behaviour of the completed project. Detailed circuit connections will be added after verification.*
-
-The original circuit diagram is currently unavailable. A verified diagram will be added after the component connections are reconstructed.
+*This description is based on the observed behaviour of the completed hardware project.*
 
 ## Project Status
 
