@@ -30,7 +30,7 @@ The completed hardware produces a flowing LED pattern whose direction changes wh
 | CD4017 decade counter       | Sequences the LED outputs                                       |
 | LEDs                        | Produce the water-flow visual effect                            |
 | 7805 voltage regulator      | Provides regulated voltage
-              |
+               |
 | Resistors and capacitors    | Support the electronic circuits                                 |
 | Breadboard and jumper wires | Circuit assembly and connections                                |
 | Battery / power supply      | Powers the hardware                                             |
@@ -81,9 +81,7 @@ The system was assembled on a breadboard using an Arduino Uno, sensor module, ti
 
 ## Demonstration Video
 
-[Watch the project demonstration](PASTE_YOUR_PUBLIC_VIDEO_LINK_HERE)
-
-Replace the placeholder above with the shareable demonstration-video URL.
+[Watch the project demonstration](https://drive.google.com/file/d/11XFE1I9LY9btV2jXLlPxMuIpCOrD85qe/view?usp=drivesdk)
 
 ## Repository Contents
 
