@@ -23,6 +23,9 @@ The project produces a water-flow-like lighting effect using LEDs. When the setu
 The system uses a 555 timer, a CD4017 decade counter, and tilt sensors. The project demonstrates the use of electronic timing, sequential logic, and tilt-based input to control a directional lighting pattern.
 
 The exact circuit topology, component values, and pin connections will be documented once they can be verified.
+## System Block Diagram
+
+![Conceptual system block diagram](system-block-diagram.png)
 
 ## Output Behaviour
 
