@@ -93,12 +93,16 @@ The system was assembled on a breadboard using an Arduino Uno, sensor module, ti
 
 ## Project Status
 
+## Project Status
+
 - [x] Hardware prototype completed
 - [x] Tilt-responsive LED flow demonstrated
 - [x] Hardware photographs added
-- [ ] Verify and document final circuit connections
-- [ ] Add a validated circuit schematic
-- [ ] Publish the verified Arduino source code
+- [x] Arduino code transcribed from the project report
+- [x] Transcribed code verified against the final working hardware
+- [x] Final circuit connections documented
+- [x] Validated circuit schematic added
+- [x] Final Arduino source code published
 
 ## Acknowledgement
 
