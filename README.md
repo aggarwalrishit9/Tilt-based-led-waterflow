@@ -1,10 +1,10 @@
 # MPU6050-Based Tilt-Controlled LED Water Flow System
 
-An electronics project that combines motion sensing, Arduino-based processing, timer circuits, and sequential LED control to create a water-flow-like lighting effect.
+An electronics project combining motion sensing, Arduino-based processing, timer circuits, and sequential LED control to create a water-flow-like lighting effect.
 
-\<p align="center">
-&#x20; \<img src="assets/project-photo-1.png" alt="Tilt-controlled LED water flow hardware" width="80%">
-\</p>
+<p align="center">
+  <img src="assets/project-photo-1.png" alt="Tilt-controlled LED water flow hardware" width="80%">
+</p>
 
 ## Overview
 
@@ -22,59 +22,52 @@ The completed hardware produces a flowing LED pattern whose direction changes wh
 
 ## Hardware Components
 
-| Component                   | Purpose                                                         |
-| --------------------------- | --------------------------------------------------------------- |
-| Arduino Uno                 | Reads and processes sensor data                                 |
-| MPU6050 IMU                 | Measures acceleration and rotational motion                     |
-| NE555 timer                 | Generates timing pulses                                         |
-| CD4017 decade counter       | Sequences the LED outputs                                       |
-| LEDs                        | Produce the water-flow visual effect                            |
-| 7805 voltage regulator      | Provides regulated voltag |
-| Resistors and capacitors    | Support the electronic circuits                                 |
-| Breadboard and jumper wires | Circuit assembly and connections                                |
-| Battery / power supply      | Powers the hardware                                             |
+| Component | Purpose |
+|---|---|
+| Arduino Uno | Reads and processes sensor data |
+| MPU6050 IMU | Measures acceleration and rotational motion |
+| NE555 timer | Timing circuit |
+| CD4017 decade counter | Sequential LED control |
+| LEDs | Produce the water-flow visual effect |
+| 7805 voltage regulator | Voltage regulation |
+| Resistors and capacitors | Supporting circuit components |
+| Breadboard and jumper wires | Circuit assembly and connections |
+| Power supply | Powers the hardware |
 
 ## System Architecture
 
 1. **Motion sensing:** The MPU6050 measures motion-related data.
-2. **Input processing:** The Arduino Uno reads the sensor data through I²C and processes the tilt input.
-3. **Timing stage:** The 555 timer provides timing pulses for the sequential lighting circuit.
-4. **Sequencing stage:** The CD4017 advances the LED output sequence.
+2. **Input processing:** The Arduino Uno reads sensor data through I²C and processes the tilt input.
+3. **Timing stage:** The 555 timer forms part of the timing circuit.
+4. **Sequencing stage:** The CD4017 provides sequential outputs.
 5. **Visual output:** The LEDs create the water-flow-like effect.
 
-*This is a functional overview. The precise signal path and direction-control implementation should be confirmed against the final working circuit before publishing a detailed schematic.*
+*This is a functional overview, not a verified pin-level schematic.*
 
 ## Communication and Control
 
 ### MPU6050 and I²C
 
-The MPU6050 communicates with the Arduino Uno over the I²C bus. The project report identifies SDA and SCL as the data and clock lines, respectively.
+The MPU6050 communicates with the Arduino Uno using the I²C bus. SDA carries data, while SCL provides the clock signal.
 
 ### 555 Timer
 
-The NE555 timer is used as a timing-signal generator in the LED sequencing system.
+The NE555 timer is used in the timing circuitry.
 
 ### CD4017 Decade Counter
 
-The CD4017 provides sequential outputs. As clock pulses arrive, the active output advances through the counter's sequence, creating a chasing-light effect.
+The CD4017 provides sequential outputs used in LED sequencing.
 
 ## Observed Output
 
 - The LEDs produce a water-flow-like lighting pattern.
-- Tilting the setup left changes the flow direction.
-- Tilting it right changes the flow to the opposite direction.
-
-These observations describe the behaviour of the completed hardware; detailed timing measurements and the verified circuit connections can be added separately.
+- The flow direction changes when the setup is tilted left or right.
 
 ## Hardware Implementation
 
-\<p align="center">
-&#x20; \<img src="assets/project-photo-2.png" alt="Hardware implementation on a breadboard" width="80%">
-\</p>
+![Hardware prototype](assets/project-photo-1.png)
 
-\<p align="center">
-&#x20; \<img src="assets/project-photo-3.png" alt="Arduino and LED circuit assembly" width="80%">
-\</p>
+![Additional hardware views](assets/project-photos-2.png)
 
 The system was assembled on a breadboard using an Arduino Uno, sensor module, timer and counter circuitry, LEDs, and supporting components.
 
@@ -82,11 +75,13 @@ The system was assembled on a breadboard using an Arduino Uno, sensor module, ti
 
 [Watch the project demonstration](https://drive.google.com/file/d/11XFE1I9LY9btV2jXLlPxMuIpCOrD85qe/view?usp=drivesdk)
 
+*Make sure the video sharing permissions allow viewers with the link to access it.*
+
 ## Repository Contents
 
-- `assets/` — project photographs and supporting images
-- `docs/` — system block diagram and additional documentation
-- `code/` — Arduino source code, once verified against the working implementation
+- `assets/` — hardware photographs
+- `docs/` — project diagrams and documentation
+- `code/` — source code, once verified against the final implementation
 
 ## Key Learning Areas
 
@@ -94,20 +89,21 @@ The system was assembled on a breadboard using an Arduino Uno, sensor module, ti
 - Arduino-based input processing
 - Timer and decade-counter circuits
 - Sequential LED control
-- Hardware assembly, testing, and troubleshooting
+- Hardware assembly and troubleshooting
 
 ## Project Status
 
 - [x] Hardware prototype completed
 - [x] Tilt-responsive LED flow demonstrated
-- [ ] Verify and document the final circuit connections
-- [ ] Add the validated circuit schematic
+- [x] Hardware photographs added
+- [ ] Verify and document final circuit connections
+- [ ] Add a validated circuit schematic
 - [ ] Publish the verified Arduino source code
 
 ## Acknowledgement
 
-This project was developed as a team-based course project. Appropriate team credits and course acknowledgement can be added to this public portfolio version.
+This was a team-based course project. Team contributions will be credited appropriately in the project documentation.
 
 ---
 
-*Documentation describes the implemented project at a functional level. Pin-level connections, component values, and implementation details will be included once verified against the original build.*
+*Pin-level connections, component values, and implementation details will be documented once verified against the original build.*
