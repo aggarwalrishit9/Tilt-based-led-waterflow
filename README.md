@@ -1,58 +1,116 @@
-# Tilt-Based LED Waterflow System
+# MPU6050-Based Tilt-Controlled LED Water Flow System
 
-An electronics project exploring tilt-controlled LED sequencing using a 555 timer, CD4017 decade counter, tilt sensors, and LEDs.
+An electronics project that combines motion sensing, Arduino-based processing, timer circuits, and sequential LED control to create a water-flow-like lighting effect.
 
-## Project Overview
+\<p align="center">
+&#x20; \<img src="assets/project-photo-1.png" alt="Tilt-controlled LED water flow hardware" width="80%">
+\</p>
 
-The project was built to explore how electronic timing, sequential logic, and tilt sensing can be combined in an LED-based output system.
+## Overview
 
-## Components
+This project explores how physical tilt can be used as an input to control a directional LED lighting pattern. An MPU6050 inertial measurement unit (IMU) provides motion data to an Arduino Uno, which processes the sensor input. A 555 timer and CD4017 decade counter form part of the LED sequencing system.
 
-- 555 timer IC
-- CD4017 decade counter IC
-- Tilt sensors
-- LEDs
-- Supporting circuit components used in the original build
+The completed hardware produces a flowing LED pattern whose direction changes when the setup is tilted left or right.
 
-*Exact resistor values, capacitor values, pin connections, and the complete bill of materials are not currently available.*
+## Objectives
 
-## Working Principle
+- Interface an MPU6050 sensor with an Arduino Uno.
+- Read motion data using the I²C communication protocol.
+- Explore microcontroller-based tilt input processing.
+- Use timer and counter ICs for sequential LED control.
+- Demonstrate a directional lighting effect using electronic hardware.
 
-The project produces a water-flow-like lighting effect using LEDs. When the setup is tilted to the left or right, the direction of the LED sequence changes accordingly, creating the visual impression of water flowing in the direction of the tilt.
+## Hardware Components
 
-The system uses a 555 timer, a CD4017 decade counter, and tilt sensors. The project demonstrates the use of electronic timing, sequential logic, and tilt-based input to control a directional lighting pattern.
+| Component                   | Purpose                                                         |
+| --------------------------- | --------------------------------------------------------------- |
+| Arduino Uno                 | Reads and processes sensor data                                 |
+| MPU6050 IMU                 | Measures acceleration and rotational motion                     |
+| NE555 timer                 | Generates timing pulses                                         |
+| CD4017 decade counter       | Sequences the LED outputs                                       |
+| LEDs                        | Produce the water-flow visual effect                            |
+| 7805 voltage regulator      | Provides regulated voltage
+              |
+| Resistors and capacitors    | Support the electronic circuits                                 |
+| Breadboard and jumper wires | Circuit assembly and connections                                |
+| Battery / power supply      | Powers the hardware                                             |
 
-The exact circuit topology, component values, and pin connections will be documented once they can be verified.
-## System Block Diagram
+## System Architecture
 
-![Conceptual system block diagram](system-block-diagram.png)
+1. **Motion sensing:** The MPU6050 measures motion-related data.
+2. **Input processing:** The Arduino Uno reads the sensor data through I²C and processes the tilt input.
+3. **Timing stage:** The 555 timer provides timing pulses for the sequential lighting circuit.
+4. **Sequencing stage:** The CD4017 advances the LED output sequence.
+5. **Visual output:** The LEDs create the water-flow-like effect.
 
-## Output Behaviour
+*This is a functional overview. The precise signal path and direction-control implementation should be confirmed against the final working circuit before publishing a detailed schematic.*
 
-- **Left tilt:** The LED flow changes to the corresponding direction.
-- **Right tilt:** The LED flow changes to the opposite direction.
-- **Visual effect:** Sequential LED illumination creates a water-flow-like pattern.
+## Communication and Control
 
-*This description is based on the observed behaviour of the completed hardware project.*
+### MPU6050 and I²C
+
+The MPU6050 communicates with the Arduino Uno over the I²C bus. The project report identifies SDA and SCL as the data and clock lines, respectively.
+
+### 555 Timer
+
+The NE555 timer is used as a timing-signal generator in the LED sequencing system.
+
+### CD4017 Decade Counter
+
+The CD4017 provides sequential outputs. As clock pulses arrive, the active output advances through the counter's sequence, creating a chasing-light effect.
+
+## Observed Output
+
+- The LEDs produce a water-flow-like lighting pattern.
+- Tilting the setup left changes the flow direction.
+- Tilting it right changes the flow to the opposite direction.
+
+These observations describe the behaviour of the completed hardware; detailed timing measurements and the verified circuit connections can be added separately.
+
+## Hardware Implementation
+
+\<p align="center">
+&#x20; \<img src="assets/project-photo-2.png" alt="Hardware implementation on a breadboard" width="80%">
+\</p>
+
+\<p align="center">
+&#x20; \<img src="assets/project-photo-3.png" alt="Arduino and LED circuit assembly" width="80%">
+\</p>
+
+The system was assembled on a breadboard using an Arduino Uno, sensor module, timer and counter circuitry, LEDs, and supporting components.
+
+## Demonstration Video
+
+[Watch the project demonstration](PASTE_YOUR_PUBLIC_VIDEO_LINK_HERE)
+
+Replace the placeholder above with the shareable demonstration-video URL.
+
+## Repository Contents
+
+- `assets/` — project photographs and supporting images
+- `docs/` — system block diagram and additional documentation
+- `code/` — Arduino source code, once verified against the working implementation
+
+## Key Learning Areas
+
+- Sensor interfacing and I²C communication
+- Arduino-based input processing
+- Timer and decade-counter circuits
+- Sequential LED control
+- Hardware assembly, testing, and troubleshooting
 
 ## Project Status
 
-- [x] Hardware project completed
-- [x] Main components identified
-- [ ] Original circuit connections documented
-- [ ] Verified circuit diagram added
-- [ ] Detailed testing notes added
+- [x] Hardware prototype completed
+- [x] Tilt-responsive LED flow demonstrated
+- [ ] Verify and document the final circuit connections
+- [ ] Add the validated circuit schematic
+- [ ] Publish the verified Arduino source code
 
-## Learning Outcomes
+## Acknowledgement
 
-This project provided practical exposure to electronic timing circuits, decade-counter logic, tilt sensing, and LED-based outputs.
-
-## Future Documentation
-
-- Reconstruct and verify the circuit schematic
-- Record component values and connections
-- Add testing observations and photographs if available
+This project was developed as a team-based course project. Appropriate team credits and course acknowledgement can be added to this public portfolio version.
 
 ---
 
-*Documentation reflects currently remembered project details. Missing circuit information will be added only when verified.*
+*Documentation describes the implemented project at a functional level. Pin-level connections, component values, and implementation details will be included once verified against the original build.*
